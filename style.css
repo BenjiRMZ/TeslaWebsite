@@ -168,3 +168,128 @@ html {
     transform: translateY(50px);
     transition: 3s;
 }
+
+/* Mega menu base styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-links a:hover {
+    border-radius: 5px;
+}
+
+.mega-menu h3
+{
+    color: black;
+}
+
+/* Mega menu styling */
+.mega-menu {
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 80%;
+    transform: translateX(-50%); /* Center the dropdown */
+    background-color: #fff;
+    padding: 50px 50px;
+    width: 50vw; /* Adjust width as needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    box-sizing: border-box; /* Ensure padding and borders are included in the width/height */
+}
+
+
+
+/* Show mega menu on hover */
+.nav-links li.dropdown:hover .mega-menu {
+    display: flex;
+}
+
+/* Clear floats */
+.mega-menu:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a img {
+    width: 300px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image fits within the specified dimensions */
+    display: block; /* Ensures the image and text are stacked vertically */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+a span {
+    display: block; /* Ensure the text is on a new line */
+    text-align: center; /* Center the text below the image */
+    margin-top: 5px; /* Add some space between the image and the text */
+    font-weight: bold; /* Optional: make the text bold */
+}
+
+
+.image-text-link {
+    display: flex;
+    align-items: center; /* Vertically centers the text with the image */
+    gap: 10px; /* Space between the image and text */
+    text-decoration: none; /* Optional: remove underline from the link */
+    padding-right: 100px;
+}
+
+.image-text-link img {
+    width: 135px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-text-link span {
+    font-size: 16px; /* Adjust text size as needed */
+    color: #444; /* Optional: text color */
+}
+
+.divider-container {
+    display: flex;
+    align-items: center; /* Center text vertically with the divider */
+    margin: 20px 0; /* Add spacing around the container */
+    position: relative; /* For positioning the divider line */
+}
+
+/* Style for the text next to the divider */
+.divider-text {
+    color: black;
+    display: flex;
+    flex-direction: column; /* Stack text lines vertically */
+    align-items: center; /* Center text horizontally */
+    z-index: 1; /* Ensure text is above the divider */
+    padding: 10px;
+}
+
+.divider-text span {
+    font-weight: lighter; /* Optional: make the text bold */
+    display: block;
+    margin: 0 0 5px; /* Space between text lines */
+    font-size: 16px; /* Adjust text size as needed */
+    text-align: center; /* Center text horizontally */
+}
+
+.divider-text-title
+{
+    font-weight: bold;
+    font-size: 110px;
+    padding-bottom: 20px;
+
+}
