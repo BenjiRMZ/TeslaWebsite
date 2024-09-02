@@ -1,0 +1,450 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: 0;
+    color: #fff;
+    font-family:
+    'Open Sans', sans-serif;
+    background: #000;
+    overflow-x: hidden;
+    min-height: 160vh;
+}
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+p
+{
+    max-width: 30em;
+}
+
+header
+{
+    height: 100vh;
+    min-height: 40em;
+    background: 
+    url(Images/hero.jpg)
+    no-repeat center;
+    background-size: cover;
+}
+
+/* Flex Layouts*/
+.navbar,
+.header-body,
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#video,
+.gauge,
+.about-text,
+.action
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar
+{
+    color: #111;
+    padding: 1em 2em;
+}
+
+.navbar a,
+.sidebar a
+{
+    color: #111;
+}
+
+.navbar li
+{
+    display: inline-block;
+}
+
+.navbar li a,
+.menu-btn
+{
+    transition: 0.3s;
+    padding: 0.3em 0.8em;
+    border-radius: 0.5em;
+}
+
+.navbar li a:hover,
+.menu-btn:hover
+{
+    background:rgba(191, 191, 191, 0.5);
+}
+
+.brand
+{
+    width: 7em;
+}
+
+.menu-btn
+{
+    cursor: pointer;
+}
+
+.menu-btn-mobile
+{
+    display: none;
+}
+
+.sidebar
+{
+    color: #111;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: -20em;
+    padding: 2em;
+    min-width: 20em;
+    height: 100vh;
+    overflow: scroll;
+    box-shadow: 0 0 1.5em rgb(0,0,0,0.5);
+    z-index: 3;
+    transition: 0.4s ease-in-out;
+}
+
+.close-btn
+{
+    cursor: pointer;
+    text-align: right;
+}
+
+.sidebar li
+{
+    margin: 1.5em 0;
+}
+
+.sidebar-backdrop
+{
+    background: rgb(255,255,255,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    opacity: 0;
+    display: none;
+    transition: 0.3s;
+}
+
+
+.header-body
+{
+    flex-direction: column;
+    text-align: center;
+    height: 90%;
+    padding: 0 2em;
+}
+
+.header-body p
+{
+    margin: 1em auto 3em auto;
+}
+
+.title
+{
+    font-size: 3.4em;
+    color: #5c5e62;
+    margin: 0.3em 0;
+}
+
+.stats
+{
+    gap: 2em;
+    margin-bottom: 1em;
+}
+
+.stats > div
+{
+    width: 10em;
+}
+
+.stats h2
+{
+    font-size: 2.3em;
+}
+
+.stats h2 span
+{
+    font-size: 0.5em;
+}
+
+.btn
+{
+    color: #fff;
+    border: 3px #fff solid;
+    padding: 0.6em 0;
+    width: 12em;
+    border-radius: 3em;
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+.btn:hover
+{
+    background: #fff;
+    color: #000;
+}
+
+.btn-mobile
+{
+    display: none;
+}
+
+.arrow
+{
+    width: 1.4em;
+    animation: arrow 5s ease infinite;
+    cursor: pointer;
+}
+
+#video
+{
+    padding: 6em 2em;
+}
+
+#video video
+{
+    width: 100%;
+    height: 20vw;
+    max-width: 1200px;
+}
+
+.gauge img
+{
+    width: 3.5em;
+}
+
+.specs
+{
+    padding: 0 2em;
+}
+
+.specs ul
+{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.specs ul li
+{
+    padding: 1em 0;
+    border-bottom: 1px #ccc solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-img
+{
+    background: 
+    url(Images/top.jpg)
+    no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 40em;
+    transition: 0.3s;
+}
+
+.about-text
+{
+   margin: 4em 0;
+   position: relative; 
+}
+
+.about img
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-text
+{
+    gap: 2em;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.about h2
+{
+    font-size: 2em;
+    max-width: 15em;
+}
+
+.interior
+{
+    padding: 0 2em 4em 2em;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.interior img
+{
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.roof
+{
+    position: relative;
+}
+
+.roof-text
+{
+    position: absolute;
+    left: 2em;
+    bottom: 4em;
+}
+
+.interior h2, .roof h2
+{
+    margin-bottom: 0.5em;
+}
+
+.iframe-video
+{
+    max-width: 1000px;
+    padding: 4em 2em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.action
+{
+    flex-direction: column;
+}
+
+.line
+{
+    display: block;
+    background: #555;
+    width: 1px;
+    height: 8em;
+}
+
+.action .btn,
+.action p{
+    margin: 0.5em 0;
+}
+
+footer
+{
+    text-align: center;
+}
+
+footer li
+{
+    display: inline-block;
+    margin: 0.7em;
+}
+
+footer li a
+{
+    color: #fff;
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+
+.roof-2
+{
+  animation: changeImg 0.5s forwards;
+}
+
+.sidebar-open-body
+{
+  min-height: 100vh;
+  overflow: hidden;  
+}
+
+@keyframes arrow
+{
+    40%{transform: translateY(0px);}
+    45%{transform: translateY(8px);}
+    55%{transform: translateY(0px);}
+    65%{transform: translateY(8px);}
+    65%{transform: translateY(0px);}
+    100%{transform: translateY(0px);}
+
+}
+
+@keyframes changeImg
+{
+    100%
+    {
+        background: 
+        url(Images/top2.jpg)
+        no-repeat center;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .navbar ul{
+        display: none;
+    }
+
+    .menu-btn-mobile{
+        display: none;
+        cursor: pointer;
+        background: #e5e8ea;
+        padding: 0.4em 1em;
+        border-radius: 0.7em;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .stats{
+        gap: 0;
+    }
+    
+    .btn-mobile{
+        display: block;
+        margin: 2em auto;
+        max-width: 90vw;
+    }
+
+    .stats .btn
+    {
+        display: none;
+    }
+
+    .stats > div {
+        width: initial;
+    }
+
+    .about-text{
+        position: relative;
+        flex-direction: column;
+    }
+}
